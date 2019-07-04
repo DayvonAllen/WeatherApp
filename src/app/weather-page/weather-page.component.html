@@ -1,0 +1,21 @@
+<div id="input">
+    <div id="input-group">
+        <h3>City Name</h3>
+        <input [(ngModel)]="city" placeholder="Ex. Tucson, Los Angeles etc.">
+    </div>
+    <button (click)="send()">Get Temperature</button>
+</div>
+<div id="result">
+    <div id="temp" *ngIf="loading === false; else load">
+        <h4>Weather!</h4>
+        <hr>
+       <span id="temperature">{{temp}} &#8457;,</span> <span id="small">{{summary}}</span> <br>
+       <span id="city">{{displayCity | uppercase}}</span>   
+    </div>
+    <ng-template #load>
+        <span id="loader"></span>
+    </ng-template>
+</div>
+
+
+
