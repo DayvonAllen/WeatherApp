@@ -109,4 +109,8 @@ hr{
       #city{
           font-size: 2.3rem;
       }
+      button{
+        width: 35vw;
+        height: 50px;
+      }
   }
